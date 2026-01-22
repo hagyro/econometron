@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "econometron"
+version = "1.0.0"
+description = "Elite Econometrician Agent - Publication-grade econometric analysis powered by Claude"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+keywords = [
+    "econometrics",
+    "statistics", 
+    "causal-inference",
+    "ai-agent",
+    "claude",
+    "research",
+    "data-analysis"
+]
+dependencies = [
+    "claude-agent-sdk>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+]
+econometrics = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "statsmodels>=0.14.0",
+    "linearmodels>=5.0",
+    "scipy>=1.10.0",
+]
+
+[project.scripts]
+econometron = "econometron:cli"
+
+[project.urls]
+Homepage = "https://github.com/your-username/econometron"
+Documentation = "https://github.com/your-username/econometron#readme"
+Repository = "https://github.com/your-username/econometron.git"
+Issues = "https://github.com/your-username/econometron/issues"
+
+[tool.setuptools]
+py-modules = ["econometron"]
+package-dir = {"" = "src"}
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "N", "W", "D", "UP", "ANN", "S", "B", "A", "C4", "ISC", "ICN", "PIE", "T20", "PT", "Q", "RSE", "RET", "SLF", "SIM", "TID", "ARG", "ERA", "PL", "TRY", "RUF"]
+ignore = ["D100", "D104", "ANN101", "ANN102"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -1,0 +1,48 @@
+{
+  "name": "econometron",
+  "version": "1.0.0",
+  "description": "Elite Econometrician Agent - Publication-grade econometric analysis powered by Claude",
+  "main": "dist/econometron.js",
+  "types": "dist/econometron.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/econometron.ts",
+    "dev": "ts-node-dev --respawn src/econometron.ts",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "econometrics",
+    "statistics",
+    "causal-inference",
+    "ai-agent",
+    "claude",
+    "research",
+    "data-analysis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "ts-node-dev": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "ts-jest": "^29.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/econometron.git"
+  }
+}
