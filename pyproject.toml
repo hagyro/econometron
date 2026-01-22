@@ -55,10 +55,10 @@ econometrics = [
 econometron = "econometron:cli"
 
 [project.urls]
-Homepage = "https://github.com/your-username/econometron"
-Documentation = "https://github.com/your-username/econometron#readme"
-Repository = "https://github.com/your-username/econometron.git"
-Issues = "https://github.com/your-username/econometron/issues"
+Homepage = "https://github.com/hagyro/econometron"
+Documentation = "https://github.com/hagyro/econometron#readme"
+Repository = "https://github.com/hagyro/econometron.git"
+Issues = "https://github.com/hagyro/econometron/issues"
 
 [tool.setuptools]
 py-modules = ["econometron"]
